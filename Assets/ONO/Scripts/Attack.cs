@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public float speed = 40.0f;
+
+    public float Speed = 7.0f;
 
     public GameObject AttackObj;
 
+    Vector3 attackPoint;
 
-    Vector3 AttackS;
-
-    private void Start()
+    void Start()
     {
-        AttackS = transform.Find("AttackS").localPosition;
-        Instantiate(AttackObj, transform.position + AttackS, Quaternion.identity);
+        attackPoint = transform.Find("AttackPoint").localPosition;
+        Instantiate(AttackObj, transform.position + attackPoint, Quaternion.identity);
     }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            Instantiate(AttackObj, transform.position + AttackS, Quaternion.identity);
+            Instantiate(AttackObj);
             
-        }
+        }   
     }
 }
