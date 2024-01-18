@@ -4,24 +4,31 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    public float fMoveSpeed = 7.0f;
+    
+    public GameObject katanaObj;
 
-    public float Speed = 7.0f;
+    Vector3 katanaPoint;
 
-    public GameObject AttackObj;
-
-    Vector3 attackPoint;
+    private float second = 0.0f;
 
     void Start()
     {
-        attackPoint = transform.Find("AttackPoint").localPosition;
-        Instantiate(AttackObj, transform.position + attackPoint, Quaternion.identity);
+        
     }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        second += Time.deltaTime;
+        if (second >= 0.3f)
         {
-            Instantiate(AttackObj);
-            
-        }   
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                katanaPoint = transform.Find("KatanaPoint").localPosition;
+                Instantiate(katanaObj, transform.position + katanaPoint, Quaternion.identity);
+                second = 0.0f;
+            }
+            Destroy(katanaObj, 0.2f);
+        }
     }
 }

@@ -6,12 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]public float speed;
 
-    private Animator anim = null;
     private Rigidbody2D rb = null;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -24,18 +22,15 @@ public class PlayerController : MonoBehaviour
         if (horizotalKey > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
-            anim.SetBool("run", true);
             xSpeed = speed;
         }
         else if (horizotalKey < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
-            anim.SetBool("run", true);
             xSpeed = -speed;
         }
         else
         {
-            anim.SetBool("run", false);
             xSpeed = 0.0f;
         }
         rb.velocity = new Vector2(xSpeed, rb.velocity.y);

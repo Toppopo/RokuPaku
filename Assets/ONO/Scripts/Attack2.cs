@@ -6,15 +6,13 @@ public class Attack2 : MonoBehaviour
 {
     public float MoveSpeed = 20.0f;
 
-
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Translate(MoveSpeed * Time.deltaTime, 0, 0);
+        transform.Translate(MoveSpeed * Time.deltaTime,0,0);    
     }
 }
