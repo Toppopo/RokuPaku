@@ -13,6 +13,12 @@ GameObject:
   - component: {fileID: 3760089411226720219}
   - component: {fileID: 7323995116909029563}
   - component: {fileID: 8127667408989620543}
+  - component: {fileID: 7131938855368046948}
+  - component: {fileID: 6802366789776001035}
+  - component: {fileID: 6768909861504661308}
+  - component: {fileID: -3178932170441133724}
+  - component: {fileID: -3439379651325123405}
+  - component: {fileID: 7109005311950264991}
   m_Layer: 0
   m_Name: Shinobu
   m_TagString: Untagged
@@ -63,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 108f49b7b96ddca41999d6d5497ed922, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,3 +124,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8d8bfe7fb6e9b4db2f93e23d8fe52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7131938855368046948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644381747176749457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3e2029339da4949853fce3f083e80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6802366789776001035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644381747176749457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49ce09c1a89c324f919140050b04f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 750
+  moveVec: {x: -1, y: 0, z: 0}
+--- !u!114 &6768909861504661308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644381747176749457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e58583cbf9cd74ba419d69bc39e618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WFX_ExplosiveSmokeGround: {fileID: 0}
+--- !u!114 &-3178932170441133724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644381747176749457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 702983db64bf1674b9e796b3504eebf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3439379651325123405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644381747176749457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75c6c918876c634184dc83b9a0af7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7109005311950264991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644381747176749457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a46498a2cc03c47915c8070cabc781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shinobu: {fileID: 0}
