@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ONO/Scenes/SampleScene.unity
+    path: Assets/ONO/Scenes/test.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/ONO/Scenes/GameOver.unity
+    guid: 9ccbe63dc7a8c154cb827adb4c9055ac
+  - enabled: 1
+    path: Assets/OGATA/Scenes/MainMenu.unity
+    guid: 8481369b9452fac4386ca89c4f84f2f1
   m_configObjects: {}
