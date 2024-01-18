@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; 
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb = null;
 
-    void Start()
+        void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
