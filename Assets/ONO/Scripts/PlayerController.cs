@@ -35,11 +35,11 @@ public class PlayerController : MonoBehaviour
         }
         rb.velocity = new Vector2(xSpeed, rb.velocity.y);
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    /*void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
             Application.LoadLevel("GameOver");
         }
-    }
+    }*/
 }

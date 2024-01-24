@@ -8,6 +8,8 @@ public class Attack : MonoBehaviour
     
     public GameObject katanaObj;
 
+    float Destroy = 1.0f;
+
     Vector3 katanaPoint;
 
     private float second = 0.0f;
@@ -24,11 +26,11 @@ public class Attack : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-                katanaPoint = transform.Find("KatanaPoint").localPosition;
+                //katanaPoint = transform.Find("KatanaPoint").localPosition;
                 Instantiate(katanaObj, transform.position + katanaPoint, Quaternion.identity);
                 second = 0.0f;
             }
-            Destroy(katanaObj, 0.2f);
         }
+        DestroyObject(katanaObj,Destroy);
     }
 }
