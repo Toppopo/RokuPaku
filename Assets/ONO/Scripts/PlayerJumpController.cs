@@ -10,6 +10,8 @@ public class PlayerJumpController : MonoBehaviour
 
     private int jumpCount = 0;
 
+    bool Space;
+
     void Start()
     {
         rbody2D = GetComponent<Rigidbody2D>();

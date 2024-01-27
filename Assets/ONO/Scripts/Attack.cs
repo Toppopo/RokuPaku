@@ -26,7 +26,7 @@ public class Attack : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-                Instantiate(katanaObj, transform.position + katanaPoint, Quaternion.identity);
+                Instantiate(katanaObj, transform.position + katanaPoint,Quaternion.identity);
                 second = 0.0f;
             }
         }

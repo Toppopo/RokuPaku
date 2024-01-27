@@ -8,32 +8,55 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb = null;
 
-        void Start()
+    [SerializeField] float jumpForce = 430f;
+
+    private int jumpCount = 0;
+    
+    private bool isMove = false;
+
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
+        if (!isMove)
+        {
+            float xSpeed = 0.0f;
+            float horizotalKey = Input.GetAxis("Horizontal");
 
-        float xSpeed = 0.0f;
-        float horizotalKey = Input.GetAxis("Horizontal");
+            if (horizotalKey > 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+                xSpeed = speed;
+            }
+            else if (horizotalKey < 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+                xSpeed = -speed;
+            }
+            else
+            {
+                xSpeed = 0.0f;
+            }
+            rb.velocity = new Vector2(xSpeed, rb.velocity.y);
+        }
 
-        if (horizotalKey > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && this.jumpCount < 1)
         {
-            transform.localScale = new Vector3(1, 1, 1);
-            xSpeed = speed;
+            this.rb.AddForce(transform.up * jumpForce);
+            jumpCount++;
+            isMove = true;
         }
-        else if (horizotalKey < 0)
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
         {
-            transform.localScale = new Vector3(-1, 1, 1);
-            xSpeed = -speed;
+            jumpCount = 0;
+            isMove = false;
         }
-        else
-        {
-            xSpeed = 0.0f;
-        }
-        rb.velocity = new Vector2(xSpeed, rb.velocity.y);
     }
     /*void OnCollisionEnter2D(Collision2D collision)
     {

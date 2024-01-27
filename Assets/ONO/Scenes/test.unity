@@ -294,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0085495, y: 0.9033024, z: -3.3333335}
+  m_LocalPosition: {x: 1.0085497, y: 1.0242785, z: -3.3333335}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -526,7 +526,7 @@ Transform:
   m_GameObject: {fileID: 1517490426}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38, y: -0.2, z: 0}
+  m_LocalPosition: {x: -0.38, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3232,8 +3232,8 @@ PolygonCollider2D:
       - {x: 15.306635, y: 5}
       - {x: 0, y: 5}
       - {x: -5, y: 5}
-      - {x: -5, y: -7}
-      - {x: 240, y: -7}
+      - {x: -5, y: -6.68}
+      - {x: 240, y: -6}
       - {x: 240, y: 5}
   m_UseDelaunayMesh: 0
 --- !u!4 &1687234121
@@ -3524,7 +3524,6 @@ GameObject:
   - component: {fileID: 2135966282}
   - component: {fileID: 2135966285}
   - component: {fileID: 2135966280}
-  - component: {fileID: 2135966279}
   - component: {fileID: 2135966278}
   - component: {fileID: 2135966277}
   m_Layer: 0
@@ -3560,19 +3559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad820fdb63e4f24da1fc618d587ce6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2135966279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135966276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05cf049b465b0d34d97a93909bab2bf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 430
 --- !u!114 &2135966280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3585,7 +3571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5933c199eddd8a449ed5c10ba708564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
+  jumpForce: 500
 --- !u!50 &2135966282
 Rigidbody2D:
   serializedVersion: 4
@@ -3601,7 +3588,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 2.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
