@@ -16,17 +16,16 @@ public class Attack : MonoBehaviour
 
     void Start()
     {
-        
+        katanaPoint = transform.Find("KatanaPoint").localPosition;
     }
 
     void Update()
     {
         second += Time.deltaTime;
-        if (second >= 0.3f)
+        if (second >= 0.45f)
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-                //katanaPoint = transform.Find("KatanaPoint").localPosition;
                 Instantiate(katanaObj, transform.position + katanaPoint, Quaternion.identity);
                 second = 0.0f;
             }
