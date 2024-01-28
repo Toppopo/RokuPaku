@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]public float speed;
 
     private Rigidbody2D rb = null;
+    private Animator anima;
 
     [SerializeField] float jumpForce = 430f;
 
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anima = GetComponent<Animator>();
     }
 
     void Update()
@@ -24,30 +26,31 @@ public class PlayerController : MonoBehaviour
         if (!isMove)
         {
             float xSpeed = 0.0f;
-            float horizotalKey = Input.GetAxis("Horizontal");
 
-            if (horizotalKey > 0)
+            if (Input.GetKey(KeyCode.D))
             {
                 transform.localScale = new Vector3(1, 1, 1);
                 xSpeed = speed;
+                anima.SetBool("walk", true);
             }
-            else if (horizotalKey < 0)
+            else if (Input.GetKey(KeyCode.A))
             {
                 transform.localScale = new Vector3(-1, 1, 1);
                 xSpeed = -speed;
+                anima.SetBool("walk", true);
             }
             else
             {
+                anima.SetBool("walk", false);
                 xSpeed = 0.0f;
             }
             rb.velocity = new Vector2(xSpeed, rb.velocity.y);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && this.jumpCount < 1)
-        {
-            this.rb.AddForce(transform.up * jumpForce);
-            jumpCount++;
-            isMove = true;
+            if (Input.GetKeyDown(KeyCode.Space) && this.jumpCount < 1)
+            {
+                this.rb.AddForce(transform.up * jumpForce);
+                jumpCount++;
+                isMove = true;
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D other)
