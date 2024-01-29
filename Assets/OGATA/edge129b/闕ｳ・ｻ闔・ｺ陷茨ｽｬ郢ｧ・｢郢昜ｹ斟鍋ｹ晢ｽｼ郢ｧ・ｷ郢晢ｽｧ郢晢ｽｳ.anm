@@ -1,0 +1,191 @@
+;EDGE用アニメーションデータ
+ANIME_VERSION=1
+
+
+;--------------------------
+PATTERN_NAME=noname000
+
+	FRAME_NUMBER=1
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=0
+		SRC_Y=64
+		LAYER_NUM=0
+		WIDTH=64
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=2
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=64
+		SRC_Y=64
+		LAYER_NUM=0
+		WIDTH=64
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=3
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=128
+		SRC_Y=64
+		LAYER_NUM=0
+		WIDTH=64
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=4
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=192
+		SRC_Y=64
+		LAYER_NUM=0
+		WIDTH=64
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=5
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=256
+		SRC_Y=64
+		LAYER_NUM=0
+		WIDTH=64
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=6
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=320
+		SRC_Y=64
+		LAYER_NUM=0
+		WIDTH=64
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+
+;--------------------------
+PATTERN_NAME=noname001
+
+	FRAME_NUMBER=1
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=0
+		SRC_Y=128
+		LAYER_NUM=0
+		WIDTH=96
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=2
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=128
+		SRC_Y=128
+		LAYER_NUM=0
+		WIDTH=96
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=3
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=256
+		SRC_Y=128
+		LAYER_NUM=0
+		WIDTH=96
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=4
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=0
+		SRC_Y=208
+		LAYER_NUM=0
+		WIDTH=96
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=5
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=128
+		SRC_Y=208
+		LAYER_NUM=0
+		WIDTH=96
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
+	FRAME_NUMBER=6
+		FILENAME=C:\Users\cre\Desktop\主人公のモーション（仮）.png
+		WIN_TITLE=主人公のモーション（仮）.png
+		SRC_X=256
+		SRC_Y=208
+		LAYER_NUM=0
+		WIDTH=96
+		HEIGHT=64
+		DEST_X=0
+		DEST_Y=0
+		DELAY=33
+		LAYER_ADD=0
+		CKEY_ENABLE=1
+		CKEY_NUM=0
+
