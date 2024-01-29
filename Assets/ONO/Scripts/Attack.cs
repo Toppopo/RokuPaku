@@ -42,6 +42,6 @@ public class Attack : MonoBehaviour
                 anima.SetBool("slash", false);
             }
         }
-        //DestroyObject(katanaObj,Destroy);
+        DestroyObject(katanaObj,Destroy);
     }
 }

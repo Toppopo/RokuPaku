@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 36561411884306641}
   - component: {fileID: 4889143216837716878}
   - component: {fileID: -8620301120942723523}
+  - component: {fileID: 5604152979167482812}
   m_Layer: 0
   m_Name: katana
   m_TagString: Untagged
@@ -98,3 +99,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 20
+--- !u!114 &5604152979167482812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759364654730440935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b3af1081ebec5045891add14903114e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fMoveSpeed: 7
+  katanaObj: {fileID: 1759364654730440935}
