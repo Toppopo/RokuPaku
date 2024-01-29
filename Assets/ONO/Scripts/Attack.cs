@@ -9,8 +9,6 @@ public class Attack : MonoBehaviour
     
     public GameObject katanaObj;
 
-    float Destroy = 1.0f;
-
     Vector3 katanaPoint;
 
     private float second = 0.0f;
@@ -42,6 +40,5 @@ public class Attack : MonoBehaviour
                 anima.SetBool("slash", false);
             }
         }
-        DestroyObject(katanaObj,Destroy);
     }
 }
