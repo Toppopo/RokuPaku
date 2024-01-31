@@ -10,7 +10,6 @@ public class Blinker : MonoBehaviour
     private Text text;
     private float time;
     bool enterPushed = false;
-    public GameObject select;
     public Image fadePanel;
     float time2 = 0.0f;
 
@@ -39,9 +38,10 @@ public class Blinker : MonoBehaviour
             c.a+= Time.deltaTime *2;
             fadePanel.color = c;
             if(c.a >= 2.0f) { 
-            select.SetActive(true);
             enterPushed = false;
             time2 = 0;
+
+            Application.LoadLevel("test");
             }
         }
 
