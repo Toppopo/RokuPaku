@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack2 : MonoBehaviour
+public class Slash2 : MonoBehaviour
 {
     public float MoveSpeed = 20.0f;
 
