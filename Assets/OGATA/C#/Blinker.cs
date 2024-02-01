@@ -41,7 +41,7 @@ public class Blinker : MonoBehaviour
             enterPushed = false;
             time2 = 0;
 
-            Application.LoadLevel("test");
+            Application.LoadLevel("MainStage");
             }
         }
 

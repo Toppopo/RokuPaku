@@ -80,7 +80,7 @@ public class Slash : MonoBehaviour
         switch (currentAttackMode)
         {
             case AttackMode.Normal:
-                if (second >= 0.45f)
+                if (second >= 1f)
                 {
                     InTime += Time.deltaTime;
                     if (Input.GetKeyDown(KeyCode.K) && InTime >= 1f)
@@ -99,10 +99,10 @@ public class Slash : MonoBehaviour
                 break;
 
             case AttackMode.SpecialAttack1:
-                if (second >= 0.45f)
+                if (second >= 1.5f)
                 {
                     InTime += Time.deltaTime;
-                    if (Input.GetKeyDown(KeyCode.J) && InTime >= 1.25f)
+                    if (Input.GetKeyDown(KeyCode.J) && InTime >= 1f)
                     {
                         InstantiatedBall = Instantiate(BallObj, transform.position + ballPoint, Quaternion.identity);
                         second = 0.0f;
@@ -118,10 +118,10 @@ public class Slash : MonoBehaviour
                 break;
 
             case AttackMode.SpecialAttack2:
-                if (second >= 0.45f)
+                if (second >= 4f)
                 {
                     InTime += Time.deltaTime;
-                    if (Input.GetKeyDown(KeyCode.L) && InTime >= 5f)
+                    if (Input.GetKeyDown(KeyCode.L) && InTime >= 1f)
                     {
                         InstantiatedBaku1 = Instantiate(BakuObj, transform.position + bakuPoint1, Quaternion.identity);
                         InstantiatedBaku2 = Instantiate(BakuObj, transform.position + bakuPoint2, Quaternion.identity);
