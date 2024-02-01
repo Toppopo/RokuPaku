@@ -11,6 +11,11 @@ public class Slash : MonoBehaviour
     public GameObject BallObj;
     public GameObject BakuObj;
     private GameObject InstantiatedKatana;
+    private GameObject InstantiatedBall;
+    private GameObject InstantiatedBaku1;
+    private GameObject InstantiatedBaku2;
+    private GameObject InstantiatedBaku3;
+    private GameObject InstantiatedBaku4;
 
     Vector3 katanaPoint;
     Vector3 ballPoint;
@@ -23,7 +28,7 @@ public class Slash : MonoBehaviour
     private float InTime = 0.0f;
     private float DestroyTime = 1f;
     private float DestroyTime2 = 2f;
-    private float DestroyTime3 = 5f;
+    private float DestroyTime3 = 1f;
 
     private Animator anima;
 
@@ -99,10 +104,10 @@ public class Slash : MonoBehaviour
                     InTime += Time.deltaTime;
                     if (Input.GetKeyDown(KeyCode.J) && InTime >= 1.25f)
                     {
-                        InstantiatedKatana = Instantiate(BallObj, transform.position + ballPoint, Quaternion.identity);
+                        InstantiatedBall = Instantiate(BallObj, transform.position + ballPoint, Quaternion.identity);
                         second = 0.0f;
                         anima.SetBool("slash", true);
-                        Destroy(InstantiatedKatana, DestroyTime2);
+                        Destroy(InstantiatedBall, DestroyTime2);
                     }
                     else
                     {
@@ -118,13 +123,16 @@ public class Slash : MonoBehaviour
                     InTime += Time.deltaTime;
                     if (Input.GetKeyDown(KeyCode.L) && InTime >= 5f)
                     {
-                        InstantiatedKatana = Instantiate(BakuObj, transform.position + bakuPoint1, Quaternion.identity);
-                        InstantiatedKatana = Instantiate(BakuObj, transform.position + bakuPoint2, Quaternion.identity);
-                        InstantiatedKatana = Instantiate(BakuObj, transform.position + bakuPoint3, Quaternion.identity);
-                        InstantiatedKatana = Instantiate(BakuObj, transform.position + bakuPoint4, Quaternion.identity);
+                        InstantiatedBaku1 = Instantiate(BakuObj, transform.position + bakuPoint1, Quaternion.identity);
+                        InstantiatedBaku2 = Instantiate(BakuObj, transform.position + bakuPoint2, Quaternion.identity);
+                        InstantiatedBaku3 = Instantiate(BakuObj, transform.position + bakuPoint3, Quaternion.identity);
+                        InstantiatedBaku4 = Instantiate(BakuObj, transform.position + bakuPoint4, Quaternion.identity);
                         second = 0.0f;
                         anima.SetBool("slash", true);
-                        Destroy(InstantiatedKatana, DestroyTime3);
+                        Destroy(InstantiatedBaku1, DestroyTime3);
+                        Destroy(InstantiatedBaku2, DestroyTime3);
+                        Destroy(InstantiatedBaku3, DestroyTime3);
+                        Destroy(InstantiatedBaku4, DestroyTime3);
                     }
                     else
                     {
