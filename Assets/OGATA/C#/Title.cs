@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Blinker : MonoBehaviour
+public class Title: MonoBehaviour
 {
 
     public float speed = 1.0f;
