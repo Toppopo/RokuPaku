@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ONO/Scenes/test.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/KANSEI/MainStage.unity
     guid: c56b339632b893148b5183479a19a39e
   - enabled: 1
     path: Assets/KANSEI/Title.unity
-    guid: adad0777c18e3a546ae5042370ee1e58
+    guid: a3dbcb0b183152d4db754cb0d36458b9
   m_configObjects: {}
