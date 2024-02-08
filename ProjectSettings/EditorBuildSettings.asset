@@ -14,10 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ONO/Scenes/test.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/KANSEI/MainStage.unity
-    guid: c56b339632b893148b5183479a19a39e
   - enabled: 1
     path: Assets/KANSEI/Title.unity
     guid: a3dbcb0b183152d4db754cb0d36458b9
+  - enabled: 1
+    path: Assets/OGATA/Scene/GameOver.unity
+    guid: 95bc1f5531a076d46afc9199d8c562e1
+  - enabled: 1
+    path: Assets/OGATA/Scene/GameClear.unity
+    guid: 92c599c2b75a9f5459126f195579d349
+  - enabled: 1
+    path: Assets/KANSEI/MainStage.unity
+    guid: 7f6f7cc3363355240990d8c0ff8476e8
   m_configObjects: {}
