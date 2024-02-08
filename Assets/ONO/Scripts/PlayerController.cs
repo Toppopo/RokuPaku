@@ -60,12 +60,9 @@ public class PlayerController : MonoBehaviour
             jumpCount = 0;
             isMove = false;
         }
-    }
-    /*void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             Application.LoadLevel("GameOver");
         }
-    }*/
+    }
 }

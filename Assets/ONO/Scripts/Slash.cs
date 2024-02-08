@@ -57,6 +57,9 @@ public class Slash : MonoBehaviour
 
     void Update()
     {
+
+        Vector2 objectForward = transform.forward;
+
         second += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -85,7 +88,7 @@ public class Slash : MonoBehaviour
                     InTime += Time.deltaTime;
                     if (Input.GetKeyDown(KeyCode.K) && InTime >= 1f)
                     {
-                        InstantiatedKatana =Instantiate(katanaObj, transform.position + katanaPoint, Quaternion.identity);
+                        InstantiatedKatana =Instantiate(katanaObj, transform.position + katanaPoint,Quaternion.identity);
                         second = 0.0f;
                         anima.SetBool("slash", true);
                         Destroy(InstantiatedKatana, DestroyTime);
