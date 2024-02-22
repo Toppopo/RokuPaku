@@ -52,6 +52,10 @@ public class PlayerController : MonoBehaviour
                 isMove = true;
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.LoadLevel("Title");
+        }
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
