@@ -38,10 +38,5 @@ public class DogMove : MonoBehaviour
         {
             velocity.x *= -1.0f;
         }
-
-        if (hit)
-        {
-            Destroy(this.gameObject);
-        }
     }
 }
