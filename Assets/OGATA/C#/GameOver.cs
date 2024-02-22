@@ -59,7 +59,7 @@ public class GameOver : MonoBehaviour
             {
                 enterPushed = false;
                 time2 = 0;
-                Application.LoadLevel("test");
+                Application.LoadLevel("MainStage");
             }
         }
 
