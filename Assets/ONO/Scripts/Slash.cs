@@ -26,8 +26,8 @@ public class Slash : MonoBehaviour
 
     private float second = 0.0f;
     private float InTime = 0.0f;
-    private float DestroyTime = 1f;
-    private float DestroyTime2 = 2f;
+    private float DestroyTime = 0.5f;
+    private float DestroyTime2 = 0.8f;
     private float DestroyTime3 = 1f;
     
     private Animator anima;
