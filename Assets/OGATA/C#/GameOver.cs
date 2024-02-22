@@ -14,6 +14,8 @@ public class GameOver : MonoBehaviour
     public Image fadePanel;
     float time2 = 0.0f;
     float time3 = 0.0f;
+    [SerializeField]
+    GameObject startSE;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,8 @@ public class GameOver : MonoBehaviour
             if (Input.GetKey(KeyCode.Return))
             {
                 enterPushed = true;
+                startSE.GetComponent<StartSE>().Request();
+
             }
         }
         if (enterPushed == true)
