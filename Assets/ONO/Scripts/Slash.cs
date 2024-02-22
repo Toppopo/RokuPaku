@@ -29,7 +29,7 @@ public class Slash : MonoBehaviour
     private float DestroyTime = 1f;
     private float DestroyTime2 = 2f;
     private float DestroyTime3 = 1f;
-
+    
     private Animator anima;
 
     public enum AttackMode
