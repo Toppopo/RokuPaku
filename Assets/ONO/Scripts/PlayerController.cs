@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     
     private bool isMove = false;
 
+    private int attackPoint = 0;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,6 +53,10 @@ public class PlayerController : MonoBehaviour
                 jumpCount++;
                 isMove = true;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.LoadLevel("Title");
         }
     }
     private void OnCollisionEnter2D(Collision2D other)

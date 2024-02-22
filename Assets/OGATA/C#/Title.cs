@@ -13,7 +13,9 @@ public class Title: MonoBehaviour
     public Image fadePanel;
     float time2 = 0.0f;
 
-    // Start is called before the first frame update
+    [SerializeField]
+    GameObject startSE;
+
     void Start()
     {
         text = this.gameObject.GetComponent<Text>();
@@ -21,14 +23,17 @@ public class Title: MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        if(enterPushed == false) {
+    {
+        if (enterPushed == false) {
             if (Input.GetKey(KeyCode.Return)){
                 enterPushed = true;
-         }
+                startSE.GetComponent<StartSE>().Request();
+          
+            }
         }
-        if(enterPushed==true)
+        if(enterPushed == true)
         {
+            
             speed = 3.0f;
             time2 += Time.deltaTime;
         }
@@ -40,7 +45,6 @@ public class Title: MonoBehaviour
             if(c.a >= 2.0f) { 
             enterPushed = false;
             time2 = 0;
-
             Application.LoadLevel("MainStage");
             }
         }

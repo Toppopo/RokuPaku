@@ -5,13 +5,13 @@ using UnityEngine;
 public class DogMove : MonoBehaviour
 {
 
-    [SerializeField]float speed = 1;
+    float speed = 2.0f;
     GameObject playerObject;
     Vector3 PlayerPosi;
     Vector3 EnemyPosi;
     float distance;
     float dist_abs;
-    bool PlayerDead = false;
+    bool hit = false;
 
     void Start()
     {
@@ -22,28 +22,21 @@ public class DogMove : MonoBehaviour
 
     void Update()
     {
-        if(PlayerDead == false)
-        {
-            PlayerPosi = playerObject.transform.position;
-            EnemyPosi = transform.position;
 
-            distance = PlayerPosi.x - EnemyPosi.x;
-            dist_abs = Mathf.Abs(distance);
+        PlayerPosi = playerObject.transform.position;
+        EnemyPosi = transform.position;
 
-            transform.localPosition -= velocity * speed;
-        }
+        distance = PlayerPosi.x - EnemyPosi.x;
+        dist_abs = Mathf.Abs(distance);
 
-        if (Input.GetKey(KeyCode.O))
-        {
-            PlayerDead = true;
-        }
+        transform.localPosition -= velocity * speed;
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.tag != "ground")
+        if (collision.gameObject.name == "wall")
         {
-            velocity.x *= -1;
+            velocity.x *= -1.0f;
         }
     }
 }
