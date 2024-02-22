@@ -9,11 +9,12 @@ public class Shinobu_Move : MonoBehaviour
     Vector3 EnemyPosi;
     float distance;
     float dist_abs;
-    bool freeze;
+    bool stop = false;
     float timer = 0.0f;
     float direct = 1;
     float speed = 2.0f;
     bool hit = false;
+    bool PlayerDead;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class Shinobu_Move : MonoBehaviour
 
     void Update()
     {
-        if(freeze == false)
+        if(PlayerDead == false)
         {
             PlayerPosi = playerObject.transform.position;
             EnemyPosi = transform.position;
@@ -36,9 +37,9 @@ public class Shinobu_Move : MonoBehaviour
 
             transform.localPosition += velocity * direct * speed;
 
-            if (dist_abs < 3)
+            if (dist_abs < 1)
             {
-                freeze = true;
+                stop = true;
                 timer = 1.0f;
             }
         }
@@ -47,7 +48,7 @@ public class Shinobu_Move : MonoBehaviour
             timer -= Time.deltaTime;
             if(timer <= 0.0f)
             {
-                freeze = false;
+                stop = false;
             }
         }
 
@@ -55,6 +56,13 @@ public class Shinobu_Move : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if (Input.GetKey(KeyCode.O))
+        {
+            PlayerDead = true;
+        }
+
+        
     }
 }
 

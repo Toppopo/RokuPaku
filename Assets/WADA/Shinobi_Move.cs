@@ -9,9 +9,9 @@ public class Shinobi_Move : MonoBehaviour
     Vector3 EnemyPosi;
     float distance;
     float dist_abs;
+    bool PlayerDead = false;
     [SerializeField]GameObject Shinobu;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerObject = GameObject.FindWithTag("Player");
@@ -20,19 +20,26 @@ public class Shinobi_Move : MonoBehaviour
         EnemyPosi = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        PlayerPosi = playerObject.transform.position;
-        EnemyPosi = transform.position;
-
-        distance = PlayerPosi.x - EnemyPosi.x;
-        dist_abs = Mathf.Abs(distance);
-
-        if(dist_abs < 36)
+        if(PlayerDead == false)
         {
-            GameObject newObject = Instantiate(Shinobu, EnemyPosi, Quaternion.identity);
-            Destroy(this.gameObject);
+            PlayerPosi = playerObject.transform.position;
+            EnemyPosi = transform.position;
+
+            distance = PlayerPosi.x - EnemyPosi.x;
+            dist_abs = Mathf.Abs(distance);
+
+            if (dist_abs < 36)
+            {
+                GameObject newObject = Instantiate(Shinobu, EnemyPosi, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (Input.GetKey(KeyCode.O))
+        {
+            PlayerDead = true;
         }
     }
 }

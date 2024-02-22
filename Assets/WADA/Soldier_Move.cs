@@ -11,6 +11,7 @@ public class Soldier_Move : MonoBehaviour
     private float dist_abs;
     private float speed = 30.0f;
     bool hit = false;
+    bool PlayerDead = false;
     [SerializeField] GameObject WFX_ExplosiveSmokeGround;
 
 
@@ -21,24 +22,31 @@ public class Soldier_Move : MonoBehaviour
 
     void Update()
     {
-        PlayerPosi = playerObject.transform.position;
-        EnemyPosi = transform.position;
-
-        distance = PlayerPosi.x - EnemyPosi.x;
-        dist_abs = Mathf.Abs(distance);
-
-        if(dist_abs < 36)
+        if(PlayerDead == false)
         {
-            Vector3 posi = transform.localPosition;
-            posi.x += Mathf.Sign(distance) * speed * Time.deltaTime;
-            transform.localPosition = posi;
+            PlayerPosi = playerObject.transform.position;
+            EnemyPosi = transform.position;
+
+            distance = PlayerPosi.x - EnemyPosi.x;
+            dist_abs = Mathf.Abs(distance);
+
+            if (dist_abs < 36)
+            {
+                Vector3 posi = transform.localPosition;
+                posi.x += Mathf.Sign(distance) * speed * Time.deltaTime;
+                transform.localPosition = posi;
+            }
+
+            if (dist_abs < 1 || hit)
+            {
+                GameObject newObject = Instantiate(WFX_ExplosiveSmokeGround, EnemyPosi, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
         }
 
-        if(dist_abs < 1 || hit)
+        if (Input.GetKey(KeyCode.O))
         {
-            GameObject newObject = Instantiate(WFX_ExplosiveSmokeGround, EnemyPosi, Quaternion.identity);
-            Destroy(this.gameObject);
+            PlayerDead = true;
         }
-
     }
 }

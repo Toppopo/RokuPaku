@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 5433590734176523620}
   - component: {fileID: 6182633333957904764}
   - component: {fileID: 7741818889209943676}
-  - component: {fileID: 600521089528534980}
   m_Layer: 0
   m_Name: Stone
-  m_TagString: Untagged
+  m_TagString: stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49ce09c1a89c324f919140050b04f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 750
+  moveSpeed: 10
   moveVec: {x: -1, y: 0, z: 0}
 --- !u!61 &7741818889209943676
 BoxCollider2D:
@@ -129,7 +128,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -145,17 +144,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &600521089528534980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3147707474548945543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a49ce09c1a89c324f919140050b04f71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 750
-  moveVec: {x: -1, y: 0, z: 0}
